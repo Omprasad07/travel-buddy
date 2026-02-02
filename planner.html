@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trip Planner | Travel Buddy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+
+    <!-- Glass Navbar -->
+    <header class="glass-navbar">
+        <div class="logo">TravelBuddy</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="planner.html" class="active">Planner</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Planner Card -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Trip Planner</h2>
+            <p>Create your perfect journey</p>
+
+            <form class="auth-form">
+
+                <input type="text" placeholder="Destination">
+
+                <select>
+                    <option>Select Budget</option>
+                    <option>Under ₹10,000</option>
+                    <option>₹10,000 – ₹25,000</option>
+                    <option>₹25,000 – ₹50,000</option>
+                    <option>Above ₹50,000</option>
+                </select>
+
+                <input type="date">
+
+                <input type="number" placeholder="Number of Travelers">
+
+                <button type="submit" class="auth-btn">
+                    Generate Plan
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
