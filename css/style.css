@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background: #0d6efd;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 48px;
+}
+
+.hero p {
+    margin: 15px 0;
+}
+
+.hero button {
+    padding: 12px 30px;
+    border: none;
+    background: #0d6efd;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+/* Forms */
+.form-box {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    background: #0d6efd;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* Destination Cards */
+.destination-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.destination-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.dest-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.dest-info h3 {
+    margin-bottom: 5px;
+}
+
+.dest-info p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.dest-info span {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* ===== AUTH PAGES (Login & Register) ===== */
+
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Glass Card */
+.auth-box {
+    width: 380px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+}
+
+/* Heading */
+.auth-box h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* Inputs */
+.auth-box input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 14px;
+}
+
+.auth-box input::placeholder {
+    color: #ddd;
+}
+
+.auth-box input:focus {
+    box-shadow: 0 0 8px #00d4ff;
+}
+
+/* Button */
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #00d4ff, #007bff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #00d4ff;
+}
+
+/* Links */
+.auth-box p {
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.auth-box a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+    .auth-box {
+        width: 90%;
+    }
+}
+/* ===== GLASSMORPHISM NAVBAR ===== */
+
+.glass-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding: 15px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.glass-navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(137, 71, 71);
+    letter-spacing: 1px;
+}
+
+/* Links */
+.glass-navbar nav a {
+    margin-left: 25px;
+    color: rgb(206, 187, 187);
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+/* Hover underline animation */
+.glass-navbar nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00d4ff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.glass-navbar nav a:hover::after {
+    width: 100%;
+}
+
+/* Sign up button style */
+.glass-navbar .signup {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #00d4ff, #007bff);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .glass-navbar {
+        flex-direction: column;
+    }
+
+    .glass-navbar nav {
+        margin-top: 10px;
+    }
+
+    .glass-navbar nav a {
+        margin: 10px;
+    }
+}
+/* Navbar Links Color Fix */
+.glass-navbar nav a {
+    color: #225d89;              /* Soft light blue */
+    font-weight: 500;
+}
+
+/* Active / Hover Color */
+.glass-navbar nav a:hover {
+    color: #00d4ff;              /* Neon blue */
+}
+
+/* Sign Up button text */
+.glass-navbar .signup {
+    color: #ffffff;
+}
+/* ===== PREMIUM GLASS FOOTER ===== */
+
+.glass-footer {
+    margin-top: 100px;
+    padding: 60px 30px 30px;
+    background: rgba(15, 32, 39, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #eaf6ff;
+    position: relative;
+}
+
+/* Top accent glow line */
+.glass-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #007bff, #00d4ff);
+}
+
+/* Footer grid */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+/* Brand section */
+.footer-brand h2 {
+    font-size: 28px;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* Footer titles */
+.footer-box h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Links */
+.footer-box a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #cfefff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-box a:hover {
+    color: #00d4ff;
+    transform: translateX(5px);
+}
+
+/* Footer bottom */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-box a:hover {
+        transform: none;
+    }
+}
+/* Reuse Login/Register Page Styles */
+.auth-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Center Card */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+}
+
+/* Glass Card */
+.auth-card {
+    width: 380px;
+    padding: 40px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+/* Title */
+.auth-card h2 {
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+/* Subtitle */
+.auth-card p {
+    color: #cdeaff;
+    margin-bottom: 30px;
+}
+
+/* Form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.auth-form input,
+.auth-form select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Button */
+.auth-btn {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #00d4ff, #0072ff);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.6);
+}
